@@ -1,12 +1,19 @@
 <script>
+    import { faker } from '@faker-js/faker';
     import { onDestroy } from 'svelte';
     import Slot from './Slot.svelte';
     import SayHello from './SayHello.svelte';
     import ClickCounter from './ClickCounter.svelte';
     import SpreadValues from './SpreadValues.svelte';
+    import PeopleTable from './PeopleTable.svelte';
 
     export let title;
     export let href;
+
+    const fakerData = [];
+    for (let i = 0; i < 10; i++) {
+        fakerData.push({ id: i, name: faker.name.findName(), email: faker.internet.email(), genre: faker.music.genre() });
+    }
 
     onDestroy(() => {
         localStorage.removeItem('spreadThings');
@@ -45,12 +52,21 @@
 </section>
 
 <section>
-    <footer>
-        <p class="text-end">
-            Copyright &copy; 2022<br />
-            Paul Capatina-Voila
-        </p>
-    </footer>
+    <h1>Faker Table!</h1>
+    <Slot>
+        <PeopleTable labels="{['ID', 'Name', 'Email', 'Genre']}" rows="{fakerData}" />
+    </Slot>
+</section>
+
+<section>
+    <Slot>
+        <footer>
+            <p class="text-end">
+                Copyright &copy; 2022<br />
+                Paul Capatina-Voila
+            </p>
+        </footer>
+    </Slot>
 </section>
 
 <style>

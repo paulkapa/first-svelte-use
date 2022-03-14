@@ -8,6 +8,7 @@
     "start": "sirv public --no-clear"
   },
   "devDependencies": {
+    "@faker-js/faker": "^6.0.0-beta.0",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
@@ -19,7 +20,6 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "faker": "6.6.6",
     "sirv-cli": "^2.0.0"
   }
 }
