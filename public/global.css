@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    transition: 200ms;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none;
+}
+
+html, body {
+    scrollbar-width: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+html, body, section, div, span {
+    position: relative;
+    display: flex;
+    flex: 0 2 100%;
+    flex-flow: column nowrap;
+
+    margin: 0 auto;
+    border-radius: 0.5em;
+
+    justify-content: space-around;
+    justify-self: auto;
+    justify-items: center;
+
+    font-family: -apple-system, BlinkMacSystemFont, "Cascadia Code", "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    text-align: center;
+    color: #333;
+    border: 0.2em solid;
+}
+
+html {
+    color: #999;
+    background: url('./bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+body {
+    color: #666;
+    background-color: aquamarine;
+    border-color: blue;
+}
+
+section {
+    margin: 2vh auto;
+    padding: 1em;
+    color: #333;
+    background-color: wheat;
+}
+
+div {
+    padding: 0.5em;
+    color: #000;
+    background-color: whitesmoke;
+ }
+
+span {
+    border-width: 0;
+}
+
+.div-col-wrap {
+    flex-flow: column wrap;
+}
+
+.div-row {
+    flex-flow: row nowrap;
+}
+
+.div-row-wrap {
+    flex-flow: row wrap;
+}
+
+.div-table {
+    flex: 1 2;
+    border: 0.1em solid;
+}
+
+.div-m-1vh {
+    margin: 4vh auto;
+}
+
+.div-w-100 {
+    width: 100%;
+}
+
+.border-0 {
+    border-width: 0;
+}
+
+a {
+    color: rgb(0,100,200);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input, button, select, textarea, span {
+    border-radius: 0.5em;
+    transition: 100ms;
+}
+
+button, select {
+    cursor: pointer;
+}
+
+input:hover, button:hover, select:hover, textarea:hover, span:hover {
+    outline: 0.2em solid slateblue;
+    z-index: 100;
+}
+
+input:focus, button:focus, select:focus, textarea:focus, span:focus {
+    background-color: black;
+    color: white;
+}
